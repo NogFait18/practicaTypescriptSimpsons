@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <title>Los Simpsons</title>
+</head>
+<body>
+    <header class="header">
+        <div class="div_titulo">
+        <img src="https://assets.foxdcg.com/dpp-uploaded/images/the-simpsons/logo-tab_s33.png?fit=inside%7C*:129" alt="Los Simpson titulo" class="titulo">
+        </div>
+        <h2>Uso de API de Los Simpson con TS</h2>
+    </header>
+    <main id="main" class="main">
+        <section class="section_btnCarga">
+            <button id="carga" class="btnCarga">
+                Cargar Personajes
+            </button>
+        </section>
+        <section class="loading" id="loader">
+            <span class="loader"></span>
+        </section>
+        <section id="error">
+
+        </section>
+        <section id="personajes" class="personajes">
+
+        </section>
+    </main>
+    <footer class="footer">
+        <a href="https://thesimpsonsapi.com/#docs" class="a">https://thesimpsonsapi.com/#docs</a>
+    </footer>
+    <script type="module" src="./dist/main.js"></script>
+</body>
+</html>
