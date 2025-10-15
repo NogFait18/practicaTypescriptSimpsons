@@ -7,17 +7,27 @@ Proyecto de práctica con **TypeScript** que consume una API de *The Simpsons* p
 ## 🧩 Estructura del proyecto
 
 practicaTypescriptSimpsons/
-│
+
+
 ├── src/ # Código fuente en TypeScript
+
 │ ├── main.ts # Punto de entrada / lógica principal
+
 │ └── style.css # Estilo principal de la pagina
+
 │
 ├── dist/ # Código compilado a JavaScript listo para producción / distribución
+
 ├── node_modules/
+
 ├── index.html # Página principal para visualizar la app
+
 ├── package.json
+
 ├── package-lock.json
+
 ├── tsconfig.json # Configuración de TypeScript
+
 └── README.md
 
 ---
