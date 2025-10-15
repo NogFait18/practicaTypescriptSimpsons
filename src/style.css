@@ -1,27 +1,36 @@
-*{
+/* RESET GLOBAL */
+html {
+    font-size: 16px; /* tamaño base fijo para rem */
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Nunito", sans-serif;
 }
 
-/* Resets de titulos */
-h2{
+/* Resets de títulos */
+h2 {
     font-weight: 900;
     font-size: 2rem;
 }
-h3{
+
+h3 {
     font-weight: 900;
     color: gray;
 }
-.header{
+
+/* HEADER */
+.header {
     padding: 1.5rem;
-    margin: .4rem;
+    margin: 0.4rem;
     margin-top: 5rem;
     width: 100%;
     text-align: center;
 }
-.div_titulo{
+
+.div_titulo {
     backdrop-filter: blur(10px);
     height: 6rem;
     position: fixed;
@@ -32,15 +41,19 @@ h3{
     justify-content: center;
     align-items: center;
 }
-.div_titulo img{
+
+.div_titulo img {
     height: 6rem;
-    padding: .2rem;
+    padding: 0.2rem;
 }
-.section_btnCarga{
+
+/* SECCIÓN BOTÓN CARGA */
+.section_btnCarga {
     display: flex;
     justify-content: center;
 }
-.btnCarga{
+
+.btnCarga {
     border: none;
     width: 15rem;
     height: 3rem;
@@ -50,20 +63,125 @@ h3{
     color: white;
     margin: 1rem;
     border-radius: 10px;
+    transition: 0.3s;
 }
-.btnCarga:hover{
+
+.btnCarga:hover {
     cursor: pointer;
+    background-color: #1a6fd1;
+}
+
+/* LOADER */
+.loading {
+    display: none;
+}
+
+.loadingActive {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 48vw; /* corregido dvw → vw */
+    top: 5vh;   /* corregido dvh → vh */
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: #0077ff;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* PERSONAJES */
+.personajes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 5rem;
+}
+
+/* CARD */
+.character-card {
+    border: 1px solid grey;
+    width: 25rem;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    transition: 0.3s;
+    padding: 2rem;
+}
+
+.character-card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    border: 1px solid #ffff00;
+    box-shadow: 0px 20px 50px 0px yellow;
+}
+
+.character-card img {
+    width: 15rem;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    box-shadow: 0px 10px 20px 0px gray;
+    margin-bottom: 2rem;
+    transition: 0.3s;
+}
+
+.character-card:hover img {
+    transform: rotate(5deg);
+}
+
+.character-card div {
+    margin: 1rem;
+}
+
+.character-card h3 {
+    margin: 0.5rem;
+}
+
+.character-card div span {
+    flex-wrap: wrap;
+    margin: 1rem;
+    border: 1px solid gray;
+    padding: 0.2rem;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+/* FOOTER */
+.footer {
+    position: relative;
+    width: 100%;
+    padding: 2rem;
+    bottom: 0;
+    text-align: center;
+    font-size: 1.2rem;
 }
 
 .loading{
     display: none;
 }
 .loadingActive{
-    display: block;
-    display: flex;
+    display: block;  
     position: relative;
-    left: 48dvw;
-    top: 5dvh;
+    left: 48vw;
+    top: 5vh;
 }
 .loader {
     width: 48px;
